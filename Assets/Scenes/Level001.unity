@@ -1745,6 +1745,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5299a5a3c31610a4a80733ffd8bbc3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1101432592 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1635931600194412410, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+  m_PrefabInstance: {fileID: 1635931599083624177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1101432594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,7 +1765,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1101432585}
   playerAnimator: {fileID: 0}
   hitStunDuration: 1
-  stunStatus: 0
 --- !u!4 &1113311623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1635931600194412406, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
@@ -2063,6 +2067,7 @@ MonoBehaviour:
   attackDamage: 1
   characterController: {fileID: 1760678962}
   stunController: {fileID: 1101432594}
+  playerMovement: {fileID: 1101432585}
   KnockBackFromRight: 0
   kbForce: 3
 --- !u!212 &1251381666
@@ -50972,14 +50977,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1635931598613842055, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635931598929008219, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1635931598929008223, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
       propertyPath: susController
       value: 
       objectReference: {fileID: 1101432594}
     - target: {fileID: 1635931598929008223, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1101432585}
+    - target: {fileID: 1635931598929008223, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
       propertyPath: stunController
       value: 
       objectReference: {fileID: 1101432594}
+    - target: {fileID: 1635931599505406864, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635931599548744887, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1635931600194412406, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -51027,6 +51052,34 @@ PrefabInstance:
     - target: {fileID: 1635931600194412407, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635931600194412407, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635931600194412407, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635931600194412413, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1101432592}
+    - target: {fileID: 1635931600194412413, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: rigidBody
+      value: 
+      objectReference: {fileID: 1101432592}
+    - target: {fileID: 1635931600194412413, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: dashCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635931600194412413, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: dashDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635931600194412413, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
+      propertyPath: dashDuration
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1635931600194412413, guid: 70fc8a2234fab6c478e9ac69d8089cb8, type: 3}
       propertyPath: stunController

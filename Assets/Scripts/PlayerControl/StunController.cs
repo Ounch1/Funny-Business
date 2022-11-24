@@ -9,9 +9,7 @@ public class StunController : MonoBehaviour
 
     // Stun duration 
     [SerializeField] private float hitStunDuration;
-    private float hitStunTime;
-
-    public bool stunStatus = false;
+    private float hitStunTime = 0f;
 
     public void InitiateStun()
     {
@@ -20,10 +18,16 @@ public class StunController : MonoBehaviour
 
     public bool Stun()
     {
-        if (Time.time - hitStunTime >= hitStunDuration)
+        if (Time.time - hitStunTime >= hitStunDuration && hitStunTime != 0)
         {
             return false;
         }
-        return true;
+        else if (hitStunTime != 0) {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
     }
 }
